@@ -27,10 +27,10 @@ This is an AI-powered predictive maintenance dashboard for industrial pump syste
 └── README.md
 ```
 
-## 💻 Getting Started
+## 📁 How to Use
 
-1. Install requirements: `pip install -r requirements.txt`
-2. Run the app: `streamlit run web_app/web_app.py`
-3. Upload a sensor CSV or generate one with `opc_logger.py`
-4. Optionally train a custom model
-5. Forecast and visualize the next 50 steps
+1. Visit the app link
+2. Upload your CSV (or check \"Use demo OPC UA data\")
+3. Preview your data and plot it
+4. (Optional) Click \"Train My Forecast Model\" to build your own model
+5. View 50-step future predictions for any sensor tag
