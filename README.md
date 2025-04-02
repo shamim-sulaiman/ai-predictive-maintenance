@@ -29,7 +29,7 @@ This is an AI-powered predictive maintenance dashboard for industrial pump syste
 
 ## 📁 How to Use
 
-1. Visit the app link
+1. [Visit the app link](https://ml-predictive-maintenance.streamlit.app/)
 2. Upload your CSV (or check \"Use demo OPC UA data\")
 3. Preview your data and plot it
 4. (Optional) Click \"Train My Forecast Model\" to build your own model
