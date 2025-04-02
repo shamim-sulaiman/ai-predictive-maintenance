@@ -1,4 +1,4 @@
-# 🧠 AI Predictive Maintenance Dashboard
+# 🧠 ML Predictive Maintenance Dashboard
 
 This is an AI-powered predictive maintenance dashboard for industrial pump systems. It enables engineers to:
 
