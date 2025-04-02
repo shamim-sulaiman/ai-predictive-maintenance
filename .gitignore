@@ -1,0 +1,45 @@
+# Create a .gitignore file suitable for a Python + Streamlit project
+gitignore_content = """
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+.envrc
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor config
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Windows batch files
+*.bat
+
+# Streamlit specific
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Data
+model/custom*.pkl
+
+# Logs
+*.log
+
+# dotenv
+*.env
+"""
+
+gitignore_path = Path("/mnt/data/.gitignore")
+gitignore_path.write_text(gitignore_content.strip())
+gitignore_path.name
