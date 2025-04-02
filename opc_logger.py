@@ -46,23 +46,27 @@ except Exception as e:
 def read_mock_sensor_data(i):
     return {
         "timestamp": datetime.now().isoformat(),
-        "vib_rms": np.random.normal(0.6 + 0.01*i, 0.05),
-        "motor_temp": np.random.normal(50 + 0.02*i, 1.0),
-        "motor_current": np.random.normal(11 + 0.01*i, 0.5),
-        "discharge_psi": np.random.normal(60 - 0.03*i, 2.0),
-        "flow_m3ph": np.random.normal(40 - 0.02*i, 1.5)
+        "vib_rms": round(np.random.normal(0.6 + 0.01*i, 0.05), 4),
+        "motor_temp": round(np.random.normal(50 + 0.02*i, 1.0), 2),
+        "motor_current": round(np.random.normal(11 + 0.01*i, 0.5), 2),
+        "discharge_psi": round(np.random.normal(60 - 0.03*i, 2.0), 2),
+        "flow_m3ph": round(np.random.normal(40 - 0.02*i, 1.5), 2)
     }
+
+# Configurable simulation length and rate
+NUM_ROWS = 100
+SAMPLE_RATE = 1  # seconds between readings
 
 print("🔧 Logging pump sensor data (simulated or real)...")
 
 data = []
-for i in range(100):
+for i in range(NUM_ROWS):
     # If using real OPC, switch the function:
     # row = read_opc_sensor_data()
     row = read_mock_sensor_data(i)
     data.append(row)
-    print(f"[{i+1}/100] Logged: {row}")
-    time.sleep(1)
+    print(f"[{i+1}/{NUM_ROWS}] Logged: {row}")
+    time.sleep(SAMPLE_RATE)
 
 df = pd.DataFrame(data)
 os.makedirs("data", exist_ok=True)
