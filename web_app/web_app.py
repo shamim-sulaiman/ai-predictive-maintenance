@@ -9,10 +9,10 @@ import os
 from sklearn.metrics import mean_squared_error
 
 # STEP 0: Page config
-st.set_page_config(page_title="AI Predictive Maintenance", layout="wide")
+st.set_page_config(page_title="ML Predictive Maintenance", layout="wide")
 
 # STEP 1: Title + Intro
-st.title("🔧 AI Predictive Maintenance - Pump Monitoring Dashboard")
+st.title("🔧 ML Predictive Maintenance - Pump Monitoring Dashboard")
 
 with st.expander("📘 About this system", expanded=True):
     st.markdown("""
