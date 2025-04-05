@@ -9,26 +9,45 @@ import os
 from sklearn.metrics import mean_squared_error
 
 # STEP 0: Page config
-st.set_page_config(page_title="ML Predictive Maintenance", layout="wide")
+st.set_page_config(page_title="ML Predictive Maintenance", page_icon="🔧", layout="wide")
 
-st.markdown("---", unsafe_allow_html=True)
 st.markdown("""
     <style>
-    .footer {
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        color: #888;
-        font-size: 0.85rem;
-        padding: 10px 0;
-        margin-top: 2rem;
+    /* Reduce base font size */
+    html, body, [class*="css"]  {
+        font-size: 14px !important;
+    }
+
+    /* Shrink headers */
+    h1, h2, h3 {
+        font-size: 1.3em !important;
+    }
+
+    /* Tighter spacing */
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Optional: reduce button padding */
+    button[kind="primary"] {
+        padding: 0.3rem 0.75rem !important;
+    }
+
+    /* Optional: smaller caption font */
+    .stCaption {
+        font-size: 12px !important;
     }
     </style>
-    <div class="footer">
-        © 2025 <strong>Shamim Sulaiman</strong> · <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> · Built with <a href="https://streamlit.io/" target="_blank">Streamlit</a>
-    </div>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+        <hr>
+        <div style="text-align: center; font-size: 12px; color: gray;">
+            © 2025 Shamim Sulaiman<br>
+            Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+        </div>
+    """, unsafe_allow_html=True)
 
 # STEP 1: Title + Intro
 st.title("🔧 ML Predictive Maintenance - Pump Monitoring Dashboard")
