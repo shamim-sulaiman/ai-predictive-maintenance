@@ -10,6 +10,8 @@ from sklearn.metrics import mean_squared_error
 
 # STEP 0: Page config
 st.set_page_config(page_title="ML Predictive Maintenance", layout="wide")
+st.markdown("<hr style='margin-top: 2em;'>", unsafe_allow_html=True)
+st.markdown("© 2025 Shamim Sulaiman. All rights reserved. For demonstration and educational purposes only.", unsafe_allow_html=True)
 
 # STEP 1: Title + Intro
 st.title("🔧 ML Predictive Maintenance - Pump Monitoring Dashboard")
