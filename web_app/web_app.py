@@ -10,8 +10,25 @@ from sklearn.metrics import mean_squared_error
 
 # STEP 0: Page config
 st.set_page_config(page_title="ML Predictive Maintenance", layout="wide")
-st.markdown("<hr style='margin-top: 2em;'>", unsafe_allow_html=True)
-st.markdown("© 2025 Shamim Sulaiman. All rights reserved. For demonstration and educational purposes only.", unsafe_allow_html=True)
+
+st.markdown("---", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: #888;
+        font-size: 0.85rem;
+        padding: 10px 0;
+        margin-top: 2rem;
+    }
+    </style>
+    <div class="footer">
+        © 2025 <strong>Shamim Sulaiman</strong> · <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a> · Built with <a href="https://streamlit.io/" target="_blank">Streamlit</a>
+    </div>
+""", unsafe_allow_html=True)
 
 # STEP 1: Title + Intro
 st.title("🔧 ML Predictive Maintenance - Pump Monitoring Dashboard")
